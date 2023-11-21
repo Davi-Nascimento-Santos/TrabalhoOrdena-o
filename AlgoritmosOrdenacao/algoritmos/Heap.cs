@@ -3,7 +3,7 @@ namespace AlgoritmosOrdenacao.algoritmos
 {
     public class Heap
     {
-        public int[] HeapSort(int[] array)
+        public void HeapSort(int[] array)
         {
             int n = array.Length;
 
@@ -21,7 +21,6 @@ namespace AlgoritmosOrdenacao.algoritmos
                 heap(array, i, 0);
             }
 
-            return array;
         }
 
         private void heap(int[] array, int n, int i)

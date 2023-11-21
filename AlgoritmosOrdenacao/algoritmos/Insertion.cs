@@ -3,7 +3,7 @@ namespace AlgoritmosOrdenacao.algoritmos
 {
     public class Insertion
     {
-        public int[] InsertionSort(int[] array)
+        public void InsertionSort(int[] array)
         {
             int n = array.Length;
             int i, j, atual;
@@ -22,7 +22,6 @@ namespace AlgoritmosOrdenacao.algoritmos
                 array[j] = atual;
             }
 
-            return array;
         }
     }
 }

@@ -2,10 +2,9 @@
 {
     public class Quick
     {
-        public int[] QuickSort(int[] array)
+        public void QuickSort(int[] array)
         {
             QuickSort(array, 0, array.Length - 1);
-            return array;
         }
 
         private void QuickSort(int[] array, int left, int right)

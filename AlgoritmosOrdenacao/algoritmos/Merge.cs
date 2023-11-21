@@ -3,11 +3,10 @@ namespace AlgoritmosOrdenacao.algoritmos
 {
     public class Merge
     {
-        public int[] MergeSort(int[] array)
+        public void MergeSort(int[] array)
         {
             int[] temp = new int[array.Length];
             MergeSort(array, temp, 0, array.Length - 1);
-            return array;
         }
 
         private void MergeSort(int[] array, int[] temp, int left, int right)

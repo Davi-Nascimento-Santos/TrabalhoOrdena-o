@@ -12,3 +12,17 @@ C:\Users\samsung\source\repos\AlgoritmosOrdenacao\AlgoritmosOrdenacao\obj\Debug\
 C:\Users\samsung\source\repos\AlgoritmosOrdenacao\AlgoritmosOrdenacao\obj\Debug\net6.0\AlgoritmosOrdenacao.pdb
 C:\Users\samsung\source\repos\AlgoritmosOrdenacao\AlgoritmosOrdenacao\obj\Debug\net6.0\AlgoritmosOrdenacao.genruntimeconfig.cache
 C:\Users\samsung\source\repos\AlgoritmosOrdenacao\AlgoritmosOrdenacao\obj\Debug\net6.0\ref\AlgoritmosOrdenacao.dll
+C:\Users\samsung\Documents\CienciaComputaçao\4 periodo\PAA\ordenacao\TrabalhoOrdena-o\AlgoritmosOrdenacao\bin\Debug\net6.0\AlgoritmosOrdenacao.exe
+C:\Users\samsung\Documents\CienciaComputaçao\4 periodo\PAA\ordenacao\TrabalhoOrdena-o\AlgoritmosOrdenacao\bin\Debug\net6.0\AlgoritmosOrdenacao.deps.json
+C:\Users\samsung\Documents\CienciaComputaçao\4 periodo\PAA\ordenacao\TrabalhoOrdena-o\AlgoritmosOrdenacao\bin\Debug\net6.0\AlgoritmosOrdenacao.runtimeconfig.json
+C:\Users\samsung\Documents\CienciaComputaçao\4 periodo\PAA\ordenacao\TrabalhoOrdena-o\AlgoritmosOrdenacao\bin\Debug\net6.0\AlgoritmosOrdenacao.dll
+C:\Users\samsung\Documents\CienciaComputaçao\4 periodo\PAA\ordenacao\TrabalhoOrdena-o\AlgoritmosOrdenacao\bin\Debug\net6.0\AlgoritmosOrdenacao.pdb
+C:\Users\samsung\Documents\CienciaComputaçao\4 periodo\PAA\ordenacao\TrabalhoOrdena-o\AlgoritmosOrdenacao\obj\Debug\net6.0\AlgoritmosOrdenacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samsung\Documents\CienciaComputaçao\4 periodo\PAA\ordenacao\TrabalhoOrdena-o\AlgoritmosOrdenacao\obj\Debug\net6.0\AlgoritmosOrdenacao.AssemblyInfoInputs.cache
+C:\Users\samsung\Documents\CienciaComputaçao\4 periodo\PAA\ordenacao\TrabalhoOrdena-o\AlgoritmosOrdenacao\obj\Debug\net6.0\AlgoritmosOrdenacao.AssemblyInfo.cs
+C:\Users\samsung\Documents\CienciaComputaçao\4 periodo\PAA\ordenacao\TrabalhoOrdena-o\AlgoritmosOrdenacao\obj\Debug\net6.0\AlgoritmosOrdenacao.csproj.CoreCompileInputs.cache
+C:\Users\samsung\Documents\CienciaComputaçao\4 periodo\PAA\ordenacao\TrabalhoOrdena-o\AlgoritmosOrdenacao\obj\Debug\net6.0\AlgoritmosOrdenacao.dll
+C:\Users\samsung\Documents\CienciaComputaçao\4 periodo\PAA\ordenacao\TrabalhoOrdena-o\AlgoritmosOrdenacao\obj\Debug\net6.0\refint\AlgoritmosOrdenacao.dll
+C:\Users\samsung\Documents\CienciaComputaçao\4 periodo\PAA\ordenacao\TrabalhoOrdena-o\AlgoritmosOrdenacao\obj\Debug\net6.0\AlgoritmosOrdenacao.pdb
+C:\Users\samsung\Documents\CienciaComputaçao\4 periodo\PAA\ordenacao\TrabalhoOrdena-o\AlgoritmosOrdenacao\obj\Debug\net6.0\AlgoritmosOrdenacao.genruntimeconfig.cache
+C:\Users\samsung\Documents\CienciaComputaçao\4 periodo\PAA\ordenacao\TrabalhoOrdena-o\AlgoritmosOrdenacao\obj\Debug\net6.0\ref\AlgoritmosOrdenacao.dll

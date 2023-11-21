@@ -3,7 +3,7 @@ namespace AlgoritmosOrdenacao.algoritmos
 {
     public class Bubble
     {
-        public int[] BubbleSort(int[] array)
+        public void BubbleSort(int[] array)
         {
             int n = array.Length;
             int k = n;
@@ -23,7 +23,6 @@ namespace AlgoritmosOrdenacao.algoritmos
                 k--;
             }
 
-            return array;
         }
     }
 }
