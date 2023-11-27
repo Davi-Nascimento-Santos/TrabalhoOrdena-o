@@ -9,7 +9,7 @@ namespace AlgoritmosOrdenacao.algoritmos
 
             for (int i = n / 2 - 1; i >= 0; i--)
             {
-                heap(array, n, i);
+                heapify(array, n, i);
             }
 
             for (int i = n - 1; i >= 0; i--)
@@ -18,12 +18,12 @@ namespace AlgoritmosOrdenacao.algoritmos
                 array[0] = array[i];
                 array[i] = temp;
 
-                heap(array, i, 0);
+                heapify(array, i, 0);
             }
 
         }
 
-        private void heap(int[] array, int n, int i)
+        private void heapify(int[] array, int n, int i)
         {
             int maior = i;
             int esquerda = 2 * i + 1;
@@ -45,7 +45,7 @@ namespace AlgoritmosOrdenacao.algoritmos
                 array[i] = array[maior];
                 array[maior] = swap;
 
-                heap(array, n, maior);
+                heapify(array, n, maior);
             }
         }
     }

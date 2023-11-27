@@ -22,7 +22,6 @@ namespace AlgoritmosOrdenacao.algoritmos
                 }
                 k--;
             }
-
         }
     }
 }

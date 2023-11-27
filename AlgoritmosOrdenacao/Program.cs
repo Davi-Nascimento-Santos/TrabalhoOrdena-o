@@ -1,65 +1,98 @@
 ﻿using AlgoritmosOrdenacao.algoritmos;
 
-string filePath = "C:\\Users\\samsung\\Documents\\CienciaComputaçao\\4 periodo\\PAA\\ordenacao\\TrabalhoOrdena-o\\numerosAleatorios.csv";
-bool encerrou = false;
-
-while (!encerrou)
+class Program 
 {
-    Console.WriteLine("Digite quantas linhas você deseja ordenar: ");
-    int n = int.Parse(Console.ReadLine());
-
-    Console.WriteLine("Digite o algoritmo que você deseja utilizar: 1 - BubbleSort\n2 - HeapSort\n3 - InsertionSort\n4 - MergeSort\n5 - QuickSort ");
-    int algoritmo = int.Parse(Console.ReadLine());
-
-    string[] lines = File.ReadAllLines(filePath);
-    int[] numeros = new int[n];
-
-    for (int i = 0; i < n; i++)
+    static void Main(string[] args)
     {
-        numeros[i] = int.Parse(lines[i]);
+        // Os paths abaixo são relativos ao meu computador, você deve alterá-los para que o programa funcione no seu
+        string filePath = "C:\\Users\\samsung\\Documents\\CienciaComputaçao\\4 periodo\\PAA\\ordenacao\\TrabalhoOrdena-o\\numerosAleatorios.csv";
+        string outputPath = "C:\\Users\\samsung\\Documents\\CienciaComputaçao\\4 periodo\\PAA\\ordenacao\\TrabalhoOrdena-o\\numerosOrdenados.csv";
+        bool encerrou = false;
+
+        while (!encerrou)
+        {
+            Console.WriteLine("Digite quantas linhas você deseja ordenar: ");
+            int n = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o número do algoritmo que você deseja utilizar:\n>> 1 - BubbleSort\n>> 2 - HeapSort\n>> 3 - InsertionSort\n>> 4 - MergeSort\n>> 5 - QuickSort");
+            int algoritmo = int.Parse(Console.ReadLine());
+
+            string[] lines = File.ReadAllLines(filePath);
+            int[] numeros = new int[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                numeros[i] = int.Parse(lines[i]);
+            }
+
+            switch (algoritmo)
+            {
+                case 1:
+                    Bubble bubble = new Bubble();
+                    bubble.BubbleSort(numeros);
+                    WriteToCsv(outputPath, numeros.Select(x => x.ToString()).ToArray());
+                    Console.WriteLine("Arquivo ordenado com sucesso! Veja o arquivo 'numerosOrdenados.csv'");
+                    break;
+                case 2:
+                    Heap heap = new Heap();
+                    heap.HeapSort(numeros);
+                    WriteToCsv(outputPath, numeros.Select(x => x.ToString()).ToArray());
+                    Console.WriteLine("Arquivo ordenado com sucesso! Veja o arquivo 'numerosOrdenados.csv'");
+                    break;
+                case 3:
+                    Insertion insertion = new Insertion();
+                    insertion.InsertionSort(numeros);
+                    WriteToCsv(outputPath, numeros.Select(x => x.ToString()).ToArray());
+                    Console.WriteLine("Arquivo ordenado com sucesso! Veja o arquivo 'numerosOrdenados.csv'");
+                    break;
+                case 4:
+                    Merge merge = new Merge();
+                    merge.MergeSort(numeros);
+                    WriteToCsv(outputPath, numeros.Select(x => x.ToString()).ToArray());
+                    Console.WriteLine("Arquivo ordenado com sucesso! Veja o arquivo 'numerosOrdenados.csv'");
+                    break;
+                case 5:
+                    Quick quick = new Quick();
+                    quick.QuickSort(numeros);
+                    WriteToCsv(outputPath, numeros.Select(x => x.ToString()).ToArray());
+                    Console.WriteLine("Arquivo ordenado com sucesso! Veja o arquivo 'numerosOrdenados.csv'");
+                    break;
+                default:
+                    Console.WriteLine("Você digitou uma opção inválida");
+                    encerrou = true;
+                    break;
+            }
+
+            Console.WriteLine("Deseja encerrar o programa? (S - sim / N - não)");
+            string encerrar = Console.ReadLine();
+            if (encerrar.ToUpper() == "S")
+            {
+                encerrou = true;
+            } else if (encerrar.ToUpper() == "N")
+            {
+                encerrou = false;
+            } else
+            {
+                Console.WriteLine("Você digitou uma opção inválida");
+                encerrou = true;
+            }
+        }
+
+
     }
 
-    switch(algoritmo)
+    static void WriteToCsv(string filePath, string[] dataArray)
     {
-        case 1:
-            Bubble bubble = new Bubble();
-            bubble.BubbleSort(numeros);
-            break;
-        case 2:
-            Heap heap = new Heap();
-            heap.HeapSort(numeros);
-            break;
-        case 3:
-            Insertion insertion = new Insertion();
-            insertion.InsertionSort(numeros);
-            break;
-        case 4:
-            Merge merge = new Merge();
-            merge.MergeSort(numeros);
-            break;
-        case 5: 
-            Quick quick = new Quick();
-            quick.QuickSort(numeros);
-            break;
-        default:
-            Console.WriteLine("Algoritmo inválido");
-            break;
+        // Open the file for writing
+        using (StreamWriter sw = new StreamWriter(filePath))
+        {
+            // Write the array elements to the file, separated by commas
+            sw.WriteLine(string.Join(",", dataArray));
+        }
     }
 
-    Console.WriteLine("Deseja encerrar a execução? 1 - Sim, 2 - Não");
-    int encerrar = int.Parse(Console.ReadLine());
-    if (encerrar == 1)
-    {
-        encerrou = true;
-    }
-    else if (encerrar == 2)
-    {
-        encerrou = false;
-    }
-    else
-    {
-        Console.WriteLine("Opção inválida");
-    }
+
 }
+
 
 
