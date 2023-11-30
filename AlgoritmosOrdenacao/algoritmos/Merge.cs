@@ -3,6 +3,7 @@ namespace AlgoritmosOrdenacao.algoritmos
 {
     public class Merge
     {
+        public int inversoes = 0;
         public void MergeSort(int[] array)
         {
             int[] temp = new int[array.Length];
@@ -34,6 +35,7 @@ namespace AlgoritmosOrdenacao.algoritmos
                 }
                 else
                 {
+                    inversoes += leftEnd - left + 1;
                     temp[k++] = array[right++];
                 }
             }
@@ -52,6 +54,11 @@ namespace AlgoritmosOrdenacao.algoritmos
             {
                 array[rightEnd] = temp[rightEnd];
             }
-        }       
+        } 
+        
+        public int getInversoes()
+        {
+            return inversoes;
+        }
     }
 }

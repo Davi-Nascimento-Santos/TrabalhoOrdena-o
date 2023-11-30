@@ -2,12 +2,13 @@
 {
     public class Quick
     {
+        public int inversoes = 0;
         public void QuickSort(int[] array)
         {
             QuickSort(array, 0, array.Length - 1);
         }
 
-        static void QuickSort(int[] array, int low, int high)
+        private void QuickSort(int[] array, int low, int high)
         {
             if (low < high)
             {
@@ -20,7 +21,7 @@
             }
         }
 
-        static int HoarePartition(int[] array, int low, int high)
+        private int HoarePartition(int[] array, int low, int high)
         {
             
             int pivot = array[(low + high) / 2];
@@ -45,12 +46,16 @@
                     return j; 
                 }
 
-              
+                inversoes += j - i;
                 int temp = array[i];
                 array[i] = array[j];
                 array[j] = temp;
             }
         }
 
+        public int getInversoes()
+        {
+            return inversoes;
+        }
     }
 }

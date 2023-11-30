@@ -3,11 +3,13 @@ namespace AlgoritmosOrdenacao.algoritmos
 {
     public class Bubble
     {
+        public int inversoes = 0;
         public void BubbleSort(int[] array)
         {
             int n = array.Length;
             int k = n;
             int temp;
+            
 
             for (int i = 0; i < n; i++)
             {
@@ -18,10 +20,16 @@ namespace AlgoritmosOrdenacao.algoritmos
                         temp = array[j - 1];
                         array[j - 1] = array[j];
                         array[j] = temp;
+                        inversoes++;
                     }
                 }
                 k--;
             }
+        }
+
+        public int getInversoes()
+        {
+            return inversoes;
         }
     }
 }

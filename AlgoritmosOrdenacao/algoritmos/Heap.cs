@@ -3,6 +3,7 @@ namespace AlgoritmosOrdenacao.algoritmos
 {
     public class Heap
     {
+        public int inversoes = 0;
         public void HeapSort(int[] array)
         {
             int n = array.Length;
@@ -41,12 +42,18 @@ namespace AlgoritmosOrdenacao.algoritmos
 
             if (maior != i)
             {
+                inversoes += n - maior;
                 int swap = array[i];
                 array[i] = array[maior];
                 array[maior] = swap;
 
                 heapify(array, n, maior);
             }
+        }
+
+        public int getInversoes()
+        {
+            return inversoes;
         }
     }
 }
