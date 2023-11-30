@@ -2,14 +2,19 @@
 {
     public class Quick
     {
-        public static void QuickSort(int[] array, int low, int high)
+        public void QuickSort(int[] array)
+        {
+            QuickSort(array, 0, array.Length - 1);
+        }
+
+        static void QuickSort(int[] array, int low, int high)
         {
             if (low < high)
             {
-                // Partition the array, and get the index of the pivot element
+                
                 int pivotIndex = HoarePartition(array, low, high);
 
-                // Recursively sort the subarrays
+                
                 QuickSort(array, low, pivotIndex);
                 QuickSort(array, pivotIndex + 1, high);
             }
