@@ -2,61 +2,50 @@
 {
     public class Quick
     {
-        public void QuickSort(int[] array)
+        public static void QuickSort(int[] array, int low, int high)
         {
-            QuickSort(array, 0, array.Length - 1);
-        }
-
-        private void QuickSort(int[] array, int left, int right)
-        {
-            if (left < right)
+            if (low < high)
             {
-                int pivot = Partition(array, left, right);
+                // Partition the array, and get the index of the pivot element
+                int pivotIndex = HoarePartition(array, low, high);
 
-                if (pivot > 1)
-                {
-                    QuickSort(array, left, pivot - 1);
-                }
-
-                if (pivot + 1 < right)
-                {
-                    QuickSort(array, pivot + 1, right);
-                }
+                // Recursively sort the subarrays
+                QuickSort(array, low, pivotIndex);
+                QuickSort(array, pivotIndex + 1, high);
             }
         }
 
-        private int Partition(int[] array, int left, int right)
+        static int HoarePartition(int[] array, int low, int high)
         {
-            int pivot = array[left];
+            
+            int pivot = array[(low + high) / 2];
+
+            int i = low - 1;
+            int j = high + 1;
 
             while (true)
             {
-                while (array[left] < pivot)
+                do
                 {
-                    left++;
+                    i++;
+                } while (array[i] < pivot);
+
+                do
+                {
+                    j--;
+                } while (array[j] > pivot);
+
+                if (i >= j)
+                {
+                    return j; 
                 }
 
-                while (array[right] > pivot)
-                {
-                    right--;
-                }
-
-                if (left < right)
-                {
-                    if (array[left] == array[right])
-                    {
-                        return right;
-                    }
-
-                    int temp = array[left];
-                    array[left] = array[right];
-                    array[right] = temp;
-                }
-                else
-                {
-                    return right;
-                }
+              
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
             }
-        }   
+        }
+
     }
 }
