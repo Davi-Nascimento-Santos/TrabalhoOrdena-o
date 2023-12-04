@@ -1,6 +1,6 @@
 ﻿using AlgoritmosOrdenacao.algoritmos;
 
-class Program
+class Program 
 {
     static void Main(string[] args)
     {
@@ -14,7 +14,7 @@ class Program
             Console.WriteLine("Digite quantas linhas você deseja ordenar: ");
             int n = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Digite o número do algoritmo que você deseja utilizar:\n>> 1 - BubbleSort\n>> 2 - HeapSort\n>> 3 - InsertionSort\n>> 4 - MergeSort\n>> 5 - QuickSort\n>> 6 - Hybrid");
+            Console.WriteLine("Digite o número do algoritmo que você deseja utilizar:\n>> 1 - BubbleSort\n>> 2 - HeapSort\n>> 3 - InsertionSort\n>> 4 - MergeSort\n>> 5 - QuickSort");
             int algoritmo = int.Parse(Console.ReadLine());
 
             string[] lines = File.ReadAllLines(filePath);
@@ -67,12 +67,6 @@ class Program
                     int inversoesQuick = quick.getInversoes();
                     Console.WriteLine("Número de inversões: " + inversoesQuick);
                     break;
-                case 6:
-                    HybridSort hybrid = new HybridSort();
-                    hybrid.Sort(numeros);
-                    WriteToCsv(outputPath, numeros.Select(x => x.ToString()).ToArray());
-                    Console.WriteLine("Arquivo ordenado com sucesso! Veja o arquivo 'numerosOrdenados.csv'");
-                    break;
                 default:
                     Console.WriteLine("Você digitou uma opção inválida");
                     encerrou = true;
@@ -84,12 +78,10 @@ class Program
             if (encerrar.ToUpper() == "S")
             {
                 encerrou = true;
-            }
-            else if (encerrar.ToUpper() == "N")
+            } else if (encerrar.ToUpper() == "N")
             {
                 encerrou = false;
-            }
-            else
+            } else
             {
                 Console.WriteLine("Você digitou uma opção inválida");
                 encerrou = true;
@@ -111,5 +103,6 @@ class Program
 
 
 }
+
 
 
