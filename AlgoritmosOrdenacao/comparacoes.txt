@@ -125,4 +125,25 @@ QuickSort: comparações: 2737856-> inversoes: 75000 -> arquivo: Decrescente -> 
 QuickSort: comparações: 3737855-> inversoes: 0 -> arquivo: Crescente -> linhas: 200000
 QuickSort: comparações: 4927650-> inversoes: 855434 -> arquivo: Aleatorio -> linhas: 200000
 QuickSort: comparações: 3737856-> inversoes: 100000 -> arquivo: Decrescente -> linhas: 200000
-
+HybridSort: comparações: 460-> inversoes: 0 -> arquivo: Crescente -> linhas: 100
+HybridSort: comparações: 1211-> inversoes: 867 -> arquivo: Aleatorio -> linhas: 100
+HybridSort: comparações: 461-> inversoes: 50 -> arquivo: Decrescente -> linhas: 100
+HybridSort: comparações: 8264-> inversoes: 0 -> arquivo: Crescente -> linhas: 1000
+HybridSort: comparações: 43398-> inversoes: 36714 -> arquivo: Aleatorio -> linhas: 1000
+HybridSort: comparações: 8265-> inversoes: 500 -> arquivo: Decrescente -> linhas: 1000
+HybridSort: comparações: 52314-> inversoes: 0 -> arquivo: Crescente -> linhas: 5000
+HybridSort: comparações: 397486-> inversoes: 0 -> arquivo: Crescente -> linhas: 30000
+HybridSort: comparações: 1804162-> inversoes: 1422268 -> arquivo: Aleatorio -> linhas: 30000
+HybridSort: comparações: 397487-> inversoes: 15000 -> arquivo: Decrescente -> linhas: 30000
+HybridSort: comparações: 676287-> inversoes: 0 -> arquivo: Crescente -> linhas: 50000
+HybridSort: comparações: 1464306-> inversoes: 794675 -> arquivo: Aleatorio -> linhas: 50000
+HybridSort: comparações: 676288-> inversoes: 25000 -> arquivo: Decrescente -> linhas: 50000
+HybridSort: comparações: 1452560-> inversoes: 0 -> arquivo: Crescente -> linhas: 100000
+HybridSort: comparações: 3742300-> inversoes: 2266459 -> arquivo: Aleatorio -> linhas: 100000
+HybridSort: comparações: 1452561-> inversoes: 50000 -> arquivo: Decrescente -> linhas: 100000
+HybridSort: comparações: 2318096-> inversoes: 0 -> arquivo: Crescente -> linhas: 150000
+HybridSort: comparações: 5555912-> inversoes: 3141130 -> arquivo: Aleatorio -> linhas: 150000
+HybridSort: comparações: 2318097-> inversoes: 75000 -> arquivo: Decrescente -> linhas: 150000
+HybridSort: comparações: 3105105-> inversoes: 0 -> arquivo: Crescente -> linhas: 200000
+HybridSort: comparações: 6621675-> inversoes: 3578279 -> arquivo: Aleatorio -> linhas: 200000
+HybridSort: comparações: 3105106-> inversoes: 100000 -> arquivo: Decrescente -> linhas: 200000

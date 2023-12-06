@@ -12,7 +12,7 @@ public class HybridSort
     {
         if (low < high)
         {
-            int pivot = Partition(array, low, high);
+            int pivot = HoarePartition(array, low, high);
 
             if (high - pivot > 12)
             {
@@ -27,31 +27,39 @@ public class HybridSort
         }
     }
 
-    private int Partition(int[] array, int low, int high)
+    private int HoarePartition(int[] array, int low, int high)
     {
-        int pivot = array[high];
-        int i = low - 1;
 
-        for (int j = low; j < high; j++)
+        int pivot = array[(low + high) / 2];
+
+        int i = low - 1;
+        int j = high + 1;
+
+        while (true)
         {
-            comparacoes++;
-            if (array[j] <= pivot)
+            do
             {
                 i++;
-                Swap(array, i, j);
+                comparacoes++;
+            } while (array[i] < pivot);
+
+            do
+            {
+                j--;
+                comparacoes++;
+
+            } while (array[j] > pivot);
+
+            if (i >= j)
+            {
+                return j;
             }
+
+            inversoes++;
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
         }
-
-        Swap(array, i + 1, high);
-        return i + 1;
-    }
-
-    private void Swap(int[] array, int i, int j)
-    {
-        int temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-        inversoes++;
     }
 
     private void InsertionSort(int[] array, int low, int high)
@@ -63,11 +71,12 @@ public class HybridSort
 
             while (j >= 0 && array[j] > key)
             {
+                inversoes++;
                 comparacoes++;
                 array[j + 1] = array[j];
                 j--;
             }
-
+            comparacoes++;
             array[j + 1] = key;
         }
     }
