@@ -3,7 +3,8 @@ namespace AlgoritmosOrdenacao.algoritmos
 {
     public class Heap
     {
-        public int inversoes = 0;
+        public long inversoes = 0;
+        public long comparacoes = 0;
         public void HeapSort(int[] array)
         {
             int n = array.Length;
@@ -18,7 +19,7 @@ namespace AlgoritmosOrdenacao.algoritmos
                 int temp = array[0];
                 array[0] = array[i];
                 array[i] = temp;
-
+                inversoes++;
                 heapify(array, i, 0);
             }
 
@@ -30,30 +31,38 @@ namespace AlgoritmosOrdenacao.algoritmos
             int esquerda = 2 * i + 1;
             int direita = 2 * i + 2;
 
+            comparacoes += 2;
             if ((esquerda < n) && (array[esquerda] > array[maior]))
             {
+                
                 maior = esquerda;
             }
-
+            comparacoes += 2;
             if ((direita < n) && (array[direita] > array[maior]))
-            {
+            {  
+                
                 maior = direita;
             }
 
             if (maior != i)
             {
-                inversoes += n - maior;
+                
                 int swap = array[i];
                 array[i] = array[maior];
                 array[maior] = swap;
-
+                inversoes++;
                 heapify(array, n, maior);
             }
         }
 
-        public int getInversoes()
+        public long getInversoes()
         {
             return inversoes;
+        }
+
+        public long getComparacoes()
+        {
+            return comparacoes;
         }
     }
 }

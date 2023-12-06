@@ -1,3 +1,6 @@
+AOH: quicksort + insertion sort
+NomeDoAlgoritmo: tempo em milisegundos -> tipo de arquivo 1-crescente 2-aleatorio 3-decrescente -> numero de linhas
+
 AOH: 0 -> 1 -> 100
 AOH: 0 -> 1 -> 100
 AOH: 0 -> 1 -> 100

@@ -3,7 +3,8 @@ namespace AlgoritmosOrdenacao.algoritmos
 {
     public class Merge
     {
-        public int inversoes = 0;
+        public long inversoes = 0;
+        public long comparacoes = 0;
         public void MergeSort(int[] array)
         {
             int[] temp = new int[array.Length];
@@ -29,24 +30,27 @@ namespace AlgoritmosOrdenacao.algoritmos
 
             while (left <= leftEnd && right <= rightEnd)
             {
+                comparacoes++;
                 if (array[left] <= array[right])
                 {
                     temp[k++] = array[left++];
                 }
                 else
                 {
-                    inversoes += leftEnd - left + 1;
                     temp[k++] = array[right++];
+                    inversoes++;
                 }
             }
 
             while (left <= leftEnd)
             {
+                comparacoes++;
                 temp[k++] = array[left++];
             }
 
             while (right <= rightEnd)
             {
+                comparacoes++;
                 temp[k++] = array[right++];
             }
 
@@ -56,9 +60,14 @@ namespace AlgoritmosOrdenacao.algoritmos
             }
         } 
         
-        public int getInversoes()
+        public long getInversoes()
         {
             return inversoes;
+        }
+
+        public long getComparacoes()
+        {
+            return comparacoes;
         }
     }
 }

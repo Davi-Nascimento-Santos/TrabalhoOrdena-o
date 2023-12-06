@@ -2,7 +2,8 @@
 {
     public class Quick
     {
-        public int inversoes = 0;
+        public long inversoes = 0;
+        public long comparacoes = 0;
         public void QuickSort(int[] array)
         {
             QuickSort(array, 0, array.Length - 1);
@@ -33,12 +34,15 @@
             {
                 do
                 {
-                    i++;
+                  i++;
+                  comparacoes++;
                 } while (array[i] < pivot);
 
                 do
                 {
-                    j--;
+                  j--;
+                  comparacoes++;
+
                 } while (array[j] > pivot);
 
                 if (i >= j)
@@ -46,16 +50,21 @@
                     return j; 
                 }
 
-                inversoes += j - i;
+                inversoes ++;
                 int temp = array[i];
                 array[i] = array[j];
                 array[j] = temp;
             }
         }
 
-        public int getInversoes()
+        public long getInversoes()
         {
             return inversoes;
+        }
+
+        public long getComparacoes()
+        {
+            return comparacoes;
         }
     }
 }

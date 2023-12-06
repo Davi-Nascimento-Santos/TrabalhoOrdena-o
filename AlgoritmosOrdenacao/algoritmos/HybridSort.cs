@@ -2,11 +2,13 @@
 
 public class HybridSort
 {
+    public long inversoes = 0;
+    public long comparacoes = 0;
     public void Sort(int[] array)
     {
         Sort(array, 0, array.Length - 1);
     }
-    public static void Sort(int[] array, int low, int high)
+    public void Sort(int[] array, int low, int high)
     {
         if (low < high)
         {
@@ -25,13 +27,14 @@ public class HybridSort
         }
     }
 
-    private static int Partition(int[] array, int low, int high)
+    private int Partition(int[] array, int low, int high)
     {
         int pivot = array[high];
         int i = low - 1;
 
         for (int j = low; j < high; j++)
         {
+            comparacoes++;
             if (array[j] <= pivot)
             {
                 i++;
@@ -43,14 +46,15 @@ public class HybridSort
         return i + 1;
     }
 
-    private static void Swap(int[] array, int i, int j)
+    private void Swap(int[] array, int i, int j)
     {
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
+        inversoes++;
     }
 
-    private static void InsertionSort(int[] array, int low, int high)
+    private void InsertionSort(int[] array, int low, int high)
     {
         for (int i = low + 1; i <= high; i++)
         {
@@ -59,11 +63,22 @@ public class HybridSort
 
             while (j >= 0 && array[j] > key)
             {
+                comparacoes++;
                 array[j + 1] = array[j];
                 j--;
             }
 
             array[j + 1] = key;
         }
+    }
+
+    public long getInversoes()
+    {
+        return inversoes;
+    }
+
+    public long getComparacoes()
+    {
+        return comparacoes;
     }
 }
